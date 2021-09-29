@@ -260,3 +260,43 @@ const myArr2=['Lyda','Ira','Lena','Vasya'];
 const myArr3=myArr1.concat(myArr2);
 const uniqArray = [...new Set(myArr3)];
 
+function task1(arr, n){
+    return arr.slice(0,n);
+}
+
+function task2(arr, n){
+    return arr.slice(-n);
+}
+
+const reducer=(sum, val)=>sum+val;
+let resArrT3=array1.reduce(reducer);
+console.log(resArrT3);
+
+const reducer2=(mult, val)=>mult*val;
+console.log(array1.reduce(reducer2));
+
+const reducer3=(sum, val)=>sum+val**3;
+console.log(array1.reduce(reducer3));
+
+function task3(arr, power){
+    const reducer=(sum, val)=>sum+val**power;
+    return arr.reduce(reducer);
+}
+
+function task3(arr){
+    let index=Math.floor(Math.random()*arr.length)
+    return arr[index];
+}
+
+function repEl(array, index1, index2){
+    let secEl=array[index2];
+    array.splice(index2,1,array[index1]);
+    array.splice(index1,1,secEl)
+    return array;
+}
+repEl(array1,0,4);
+console.log(array1);
+
+function repEl(array, index1, index2){
+    return array.splice(index1,0,array.splice(index2,1)[0]);
+}
