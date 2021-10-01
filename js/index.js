@@ -300,3 +300,70 @@ console.log(array1);
 function repEl(array, index1, index2){
     return array.splice(index1,0,array.splice(index2,1)[0]);
 }
+
+function task7(array){
+    if (array <= 0)
+        return false;
+    else {
+        return true;
+    }
+}
+let array7=[0,-1,4,9,0,-9,-3, 8, 7, -9,0];
+console.log(array7.filter(task7));
+
+function task7for(array){
+    let res=[];
+    for (let i=0, j=0; i<array.length; i++){
+        if(array[i]>0) res[j]=array[i];
+        j++;
+    }
+    return array;
+}
+let array7=[0,-1,4,9,0,-9,-3, 8, 7, -9,0];
+console.log(task7for(array7));
+
+function task7fil(array){
+    array.filter((el)=>el>0);
+    return array;
+}
+let array7=[0,-1,4,9,0,-9,-3, 8, 7, -9,0];
+console.log(array7);
+
+array7.reverse().concat(array2).splice(index1,0,array.splice(index2,1)[0]).filter((el)=>el>0);
+
+//set
+
+set1 - new Set([1,2,3,4,5]);
+set2 - new Set([1,1,1,2,2,2,2,2,,,,,2,3,4,5]);
+set3 - new Set([1,2,3,,,,,4,,4,4,4,5]);
+console.log(set1);
+console.log(set2);
+console.log(set3);
+
+//add
+
+set1.add(6);
+set2.add('hello');
+set2.add('hello');
+console.log(set1);
+console.log(set2);
+
+//obj
+//has
+console.log(set1.has(1));
+console.log(set1.has(100));
+
+set2.clear();//очистить все
+set2.delete();//удалить элемент
+
+//map
+
+const map1=new Map();
+map1.set('Olya',20);
+map1.set('Ira',31);
+map1.get('Olya');
+const objkey={name:'test'};
+map1.set(objkey,'something');
+map1.delete('Ira');
+map1.clear();
+
