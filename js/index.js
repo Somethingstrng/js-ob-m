@@ -367,3 +367,84 @@ map1.set(objkey,'something');
 map1.delete('Ira');
 map1.clear();
 
+map1.keys();
+const iterator_map1=map1.keys();
+iterator_map1.next();
+iterator_map1.next().value;
+
+const arr=['val1','val2','val3','val4','val5','val6',];
+const a1=arr[1];
+const a0=arr[0];
+const [el0,el1]=arr;
+const [e1,e2,,e4]=arr;
+const [firstEl,...reatArray]=arr;
+
+const arr2=['val1',[2,4,5,3,4,6,7,3],'val3','val4','val5','val6',];
+const [el1,...rest]=arr2;
+let [l1,...rest]=arr2;
+let [l1,,,l4]=arr2;
+let [,[x1,x2,x3,x4,x5,...subrest]]=arr2;
+console.log(x2);
+
+const myArr1=[1,2,3,4,5];
+const myArr2=['test1','test2']
+let result=[...myArr1,...myArr2];
+
+result=new Set([...myArr1,...myArr2])
+
+//строки string
+let str1='hello!@# world';
+let str2='';
+console.log(str1);
+//доступ str[0], str[1]
+const [firstCh,...reatStr]=str1;
+console.log(str1.charAt(0));
+console.log(str1.charAt(str1.length-1));
+// \\обратный слэш
+// \t табуляция
+// \n новая строка
+// \' кавычки \"
+// \u юникод
+console.log('word \'hello\'');
+console.log('word \nhello\nhi');
+console.log('\u{1F608}');
+
+//длинна строки
+console.log(str1.length);
+
+str1.toLowerCase();
+str1.toUpperCase();
+str1.indexOf('!');
+str1.lastIndexOf('*');
+str1.includes('!');
+str1.startsWith('he');
+str1.startsWith('lo', 3);
+str1.endsWith('r',2);
+str1.slice(0,2);
+
+//строку преобразовать в массив слов
+let str3='      hello  world string fox lets    go';
+function task1(str3){
+    return str3.trim().split(' ');
+}
+console.log(task1(str3));
+//сделать первую букву заглавной
+str3[0].toUpperCase()+str3.slice(1);
+//не работает нормально, если в начале куча пробелов
+//сделать каждую первую букву слова заглавной
+
+//сделаьт переменную в верблюжьем регистре
+let words=str.split(' ');
+
+//вставить слово в предложении в указанную позицию
+function task10(str, word, position){
+    let words =str.split('');
+    words.splice(position,0,word);
+    let resultStr=words.join('');
+    return resultStr;
+}
+
+//найти сколько раз символ встречается в строке
+function task11(str, searchSymbol){
+
+}//
